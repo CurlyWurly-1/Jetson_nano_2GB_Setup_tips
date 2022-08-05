@@ -18,7 +18,7 @@ Setup Tips
   - Mouse
   - Keyboard
   - Webcam
-  - Network cable (don't use wifi dongle, it can slow thee camera down)
+  - Network cable (don't use wifi dongle, it can slow the camera down)
 - Insert the power cable and it will boot up - follow the onscreen instructions until you get to desktop
 - In a terminal, execute the following 
   - sudo apt-get install nano
@@ -33,7 +33,7 @@ Setup Tips
   - sudo chmod 600 /mnt/4GB.swap
   - sudo mkswap /mnt/4GB.swap
   - sudo nano /etc/fstab 
-    - Add or replace the existing swap line with the following line (at the end), then "CtrlX" and then "CtrlO" to save
+    - Add (or replace the existing swap line) the following line at the end, then "CtrlX" and then "CtrlO" to save
     - /mnt/4GB.swap swap swap defaults 0 0
 
 4) REBOOT !!
