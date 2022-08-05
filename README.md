@@ -4,9 +4,9 @@ Setup Tips
 1) HOW TO INSTALL A FAN ON HEATSINK
 - Install a fan (e.g. Noctua NF-A4x20 5V PWM )
 - Install fan control
-  -- Open a terminal and execute
-  -- git clone  https://github.com/Pyrestone/jetson-fan-ctl    
-  -- sudo ./install.sh 
+  - Open a terminal and execute
+  - git clone  https://github.com/Pyrestone/jetson-fan-ctl    
+  - sudo ./install.sh 
 
 2) HOW TO DO INITIAL SETUP  
 - Download the Jetson Nano 2GB image here
