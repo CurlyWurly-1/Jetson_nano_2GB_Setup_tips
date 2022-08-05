@@ -8,8 +8,9 @@ Setup Tips
     - git clone  https://github.com/Pyrestone/jetson-fan-ctl    
     - sudo ./install.sh 
 
-2) HOW TO DO PROGRESS INITIAL SETUP  
+2) INITIAL SETUP PROCEDURE  
 - Download the Jetson Nano 2GB image here
+  - https://developer.nvidia.com/jetson-nano-2gb-sd-card-image
 - Use Balena Etcher to burn the image to a 64GB card
 - Insert card into Jetson Nano
 - connect the following
