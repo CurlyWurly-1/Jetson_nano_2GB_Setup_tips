@@ -40,8 +40,9 @@ Setup Tips
     https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/courseware/b2e02e999d9247eb8e33e893ca052206/63a4dee75f2e4624afbc33bce7811a9b/
 
 5) Install the Jupyter notebook with the following commands (it takes quite a bit of time to install) . When it finishes, check what the IP address of the nano is and you can access the jupyter notebook at <NANOIP):8888 - use "dlinano" as the password 
-    echo "sudo docker run --runtime nvidia -it --rm --network host --volume ~/nvdli-data:/nvdli-nano/data --device /dev/video0  nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
-chmod +x docker_dli_run.sh
-    
-6) If you reboot, you can bring up the Jupyter notebook by just executing the last line as follows
-    ./docker_dli_run.sh
+ - echo "sudo docker run --runtime nvidia -it --rm --network host --volume ~/nvdli-data:/nvdli-nano/data --device /dev/video0  nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
+ - chmod +x docker_dli_run.sh
+ - ./docker_dli_run.sh    
+ 
+6) If you reboot, the Jupyter notebook will not be running - you can bring it back by executing the last line of above as follows. There is no need to re-install from scratch
+ - ./docker_dli_run.sh
