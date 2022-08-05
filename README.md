@@ -61,6 +61,6 @@ Install the Jupyter notebook with the following commands (it takes quite a bit o
  
  
  
-6) IF YOU REBOOT, GET THE JUPYTER NPTEBOOK BACK
-If you reboot, the Jupyter notebook will not be running - you can bring it back by executing the last line of above as follows. There is no need to re-install from scratch
+6) IF YOU REBOOT, GET THE JUPYTER NOTEBOOK BACK
+If you reboot, the Jupyter notebook will not be running - You can bring it back by executing the last line of the above as follows (There is no need to re-install from scratch)
 - ./docker_dli_run.sh
