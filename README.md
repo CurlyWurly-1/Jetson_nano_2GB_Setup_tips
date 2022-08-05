@@ -55,6 +55,7 @@ Setup Tips
 
 5) INSTALL THE COURSE JUPYTER NOTEBOOK
 Install the Jupyter notebook with the following commands (it takes quite a bit of time to install) . When it finishes, check what the IP address of the nano is and you can access the jupyter notebook at <NANOIP):8888 - use "dlinano" as the password 
+- mkdir -p ~/nvdli-data
 - echo "sudo docker run --runtime nvidia -it --rm --network host --volume ~/nvdli-data:/nvdli-nano/data --device /dev/video0  nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
 - chmod +x docker_dli_run.sh
 - ./docker_dli_run.sh    
