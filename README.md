@@ -82,6 +82,6 @@ Execute the following command in a terminal
    - pip3 install pyserial
 
 10) INSTALL "face_recognition". Follow the instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
-   - sudo apt-get update
-   - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
-   - sudo pip3 -v install Cython face_recognition
+    - sudo apt-get update
+    - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
+    - sudo pip3 -v install Cython face_recognition
