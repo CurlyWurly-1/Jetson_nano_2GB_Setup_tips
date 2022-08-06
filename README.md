@@ -49,29 +49,29 @@ Setup Tips
 
 
 5) ENROL IN COURSE HERE !!!
-- https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/courseware/b2e02e999d9247eb8e33e893ca052206/63a4dee75f2e4624afbc33bce7811a9b/
+   - https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/courseware/b2e02e999d9247eb8e33e893ca052206/63a4dee75f2e4624afbc33bce7811a9b/
 
 
 
 5) INSTALL THE COURSE JUPYTER NOTEBOOK
 Install the Jupyter notebook with the following commands (it takes quite a bit of time to install) . When it finishes, check what the IP address of the nano is and you can access the jupyter notebook at <NANOIP):8888 - use "dlinano" as the password 
-- mkdir -p ~/nvdli-data
-- echo "sudo docker run --runtime nvidia -it --rm --network host --volume ~/nvdli-data:/nvdli-nano/data --device /dev/video0  nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
-- chmod +x docker_dli_run.sh
-- ./docker_dli_run.sh    
+   - mkdir -p ~/nvdli-data
+   - echo "sudo docker run --runtime nvidia -it --rm --network host --volume ~/nvdli-data:/nvdli-nano/data --device /dev/video0  nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
+   - chmod +x docker_dli_run.sh
+   - ./docker_dli_run.sh    
  
  
  
 6) IF YOU REBOOT, GET THE JUPYTER NOTEBOOK BACK
 If you reboot, the Jupyter notebook will not be running - You can bring it back by executing the last line of the above as follows (There is no need to re-install from scratch)
-- ./docker_dli_run.sh
+   - ./docker_dli_run.sh
 
 7) INSTALL VSCODE
 Download the .deb file for 'ARM64'. Whenm downloaded, click on it and install it. It will be seen in the "programming" section (bottom left icon). Add it to your desktop for easy access
-https://code.visualstudio.com/download
+   - https://code.visualstudio.com/download
 
 8) INSTALL PIP3
 Execute hte following in a terminal
-- sudo apt-get -y install python3-pip
+   - sudo apt-get -y install python3-pip
 
 9)
