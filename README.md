@@ -65,3 +65,13 @@ Install the Jupyter notebook with the following commands (it takes quite a bit o
 6) IF YOU REBOOT, GET THE JUPYTER NOTEBOOK BACK
 If you reboot, the Jupyter notebook will not be running - You can bring it back by executing the last line of the above as follows (There is no need to re-install from scratch)
 - ./docker_dli_run.sh
+
+7) INSTALL VSCODE
+Download the .deb file for 'ARM64'. Whenm downloaded, click on it and install it. It will be seen in the "programming" section (bottom left icon). Add it to your desktop for easy access
+https://code.visualstudio.com/download
+
+8) INSTALL PIP3
+Execute hte following in a terminal
+- sudo apt-get -y install python3-pip
+
+9)
