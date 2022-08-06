@@ -67,11 +67,14 @@ If you reboot, the Jupyter notebook will not be running - You can bring it back 
   - ./docker_dli_run.sh
 
 7) INSTALL VSCODE
-Download the .deb file for 'ARM64'. Whenm downloaded, click on it and install it. It will be seen in the "programming" section (bottom left icon). Add it to your desktop for easy access
+Download the .deb file for 'ARM64'. 
+
+When downloaded, click on it and in the next window, press "install". After it has installed, VsCode can be accessed in the "programming" section (bottom left icon). Right click VsCode icon and add it to your desktop for easy access
   - https://code.visualstudio.com/download
 
 8) INSTALL PIP3
-Execute hte following in a terminal
+
+Execute the following command in a terminal
   - sudo apt-get -y install python3-pip
 
 9)
