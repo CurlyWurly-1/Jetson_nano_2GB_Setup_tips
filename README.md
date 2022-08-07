@@ -2,14 +2,11 @@
 Setup Tips 
 
 
-
 1) HOW TO INSTALL A FAN ON HEATSINK
    - Install a fan (e.g. Noctua NF-A4x20 5V PWM )
-   - Install fan control
-     - Open a terminal and execute
-       - git clone  https://github.com/Pyrestone/jetson-fan-ctl    
-       - sudo ./install.sh 
-
+   - Open a terminal and execute
+     - git clone  https://github.com/Pyrestone/jetson-fan-ctl    
+     - sudo ./install.sh 
 
 
 2) INITIAL SETUP PROCEDURE  
@@ -30,7 +27,6 @@ Setup Tips
      - sudo apt-get upgrade
 
 
-
 3) HOW TO RESOLVE MEMORY PROBLEMS (Nano 2GB slows down/hangs if this is not done) 
    - Adjust the memory by Opening a terminal window and entering the following commands
      - free -m
@@ -43,19 +39,15 @@ Setup Tips
        - /mnt/4GB.swap swap swap defaults 0 0
 
 
-
 4) REBOOT !!
-
 
 
 5) ENROL IN COURSE HERE !!!
    - https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/courseware/b2e02e999d9247eb8e33e893ca052206/63a4dee75f2e4624afbc33bce7811a9b/
 
 
-
-5) INSTALL THE COURSE JUPYTER NOTEBOOK
-Install the Jupyter notebook with the following commands (it takes quite a bit of time to install) . When it finishes, check what the IP address of the nano is and you can access the jupyter notebook at <NANOIP):8888 - use "dlinano" as the password 
-   - In a terminal window, execute the following commands:
+5) INSTALL THE COURSE JUPYTER NOTEBOOK. 
+   - In a terminal window, execute the following commands (it takes quite a bit of time to install). When it finishes, check what the IP address of the nano is <Nano_ip> and you can access the jupyter notebook with a web browser using a url of <NANO_IP):8888  (use "dlinano" as the password) 
      - mkdir -p ~/nvdli-data
      - echo "sudo docker run --runtime nvidia -it --rm --network host --volume ~/nvdli-data:/nvdli-nano/data --device /dev/video0  nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
      - chmod +x docker_dli_run.sh
@@ -63,15 +55,13 @@ Install the Jupyter notebook with the following commands (it takes quite a bit o
   
  
 6) IF YOU REBOOT, GET THE JUPYTER NOTEBOOK BACK
-If you reboot, the Jupyter notebook will not be running - You can bring it back by executing the last line of the above as follows (There is no need to re-install from scratch)
-   - In a terminal window, execute the following commands:
+   - If you reboot, the Jupyter notebook will not be running - You can bring it back by executing the last line of the above as follows (There is no need to re-install from scratch) by executing the following commands:
      - ./docker_dli_run.sh
 
 
 7) INSTALL VSCODE
-Download the .deb file for 'ARM64'. 
-When downloaded, click on it, and in the next window, press "install". After it has installed, VsCode can be accessed in the "programming" section when you press the bottom left icon (like START in Windows!). Right click the VsCode icon and Select "add to desktop" for easy access
-   - https://code.visualstudio.com/download
+   - Download the .deb file for 'ARM64'. When downloaded, click on it, and in the next window, press "install". After it has installed, VsCode can be accessed in the "programming" section when you press the bottom left icon (like START in Windows!). Right click the VsCode icon and Select "add to desktop" for easy access
+     - https://code.visualstudio.com/download
 
 
 8) INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
