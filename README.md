@@ -20,13 +20,12 @@ Setup Tips
    - Install a fan (e.g. Noctua NF-A4x20 5V PWM ) and connect the 4 pin plug to the 4 pin connector
    - Insert power cable to boot up
    - Open a terminal and execute
-     - git clone  https://github.com/Pyrestone/jetson-fan-ctl    
+     - git clone  https://github.com/Pyrestone/jetson-fan-ctl
+     - cd jetson-fan-ctl
      - sudo ./install.sh 
 
 3) INITIAL SETUP (Software) 
    - In a terminal, execute the following 
-     - sudo apt-get update
-     - sudo apt-get upgrade
      - sudo apt-get -y install python3-pip
      - sudo apt-get install nano
 
