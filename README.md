@@ -60,8 +60,13 @@ Setup Tips
 
 
 8) INSTALL VSCODE
-   - Download the .deb file for 'ARM64'. When downloaded, click on it, and in the next window, press "install". After it has installed, VsCode can be accessed in the "programming" section when you press the bottom left icon (like START in Windows!). Right click the VsCode icon and Select "add to desktop" for easy access
-     - https://code.visualstudio.com/download
+   - Get the ".deb"file
+     - Download the Ubuntu ".deb" file for "ARM64" from https://code.visualstudio.com/download
+     - Right-click on the downloaded file and press "open Folder"
+     - When the folder contents are displayed, double click the ".deb" file 
+     - In the next window, press "install". 
+     - After it has installed, the VsCode icon can be accessed when you press the bottom left icon (like START in Windows!) and look in the "programming" section.   
+     - Right click the VsCode icon and Select "add to desktop" for easy access
 
 9) INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
    - In a terminal window, execute the following commands:
