@@ -16,7 +16,9 @@ Setup Tips
    - Insert the power cable and it will boot up - follow the onscreen instructions until you get to desktop
 
 2) HOW TO INSTALL A FAN ON HEATSINK
-   - Install a fan (e.g. Noctua NF-A4x20 5V PWM )
+   - Shutdown / remove power
+   - Install a fan (e.g. Noctua NF-A4x20 5V PWM ) and connect the 4 pin plug to the 4 pin connector
+   - Insert power cable to boot up
    - Open a terminal and execute
      - git clone  https://github.com/Pyrestone/jetson-fan-ctl    
      - sudo ./install.sh 
@@ -53,19 +55,15 @@ Setup Tips
      - echo "sudo docker run --runtime nvidia -it --rm --network host --volume ~/nvdli-data:/nvdli-nano/data --device /dev/video0  nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
      - chmod +x docker_dli_run.sh
      - ./docker_dli_run.sh    
-  
- 
-8) IF YOU REBOOT, GET THE JUPYTER NOTEBOOK BACK
-   - If you reboot, the Jupyter notebook will not be running - You can bring it back by executing the last line of the above as follows (There is no need to re-install from scratch) by executing the following commands:
+   - If you reboot, you can bring back the Jupyter notebook by executing the last command of the above as follows (There is no need to re-install from scratch):
      - ./docker_dli_run.sh
 
 
-9) INSTALL VSCODE
+8) INSTALL VSCODE
    - Download the .deb file for 'ARM64'. When downloaded, click on it, and in the next window, press "install". After it has installed, VsCode can be accessed in the "programming" section when you press the bottom left icon (like START in Windows!). Right click the VsCode icon and Select "add to desktop" for easy access
      - https://code.visualstudio.com/download
 
-
-10) INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
+9) INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
    - In a terminal window, execute the following commands:
      - sudo apt-get install -y python3-venv
      - python3 -m venv .py3venv
@@ -74,7 +72,7 @@ Setup Tips
      - source ~/.py3venv/bin/activate
      - deactivate
 
-11) INSTALL USEFUL LIBRARIES 
+10) INSTALL USEFUL LIBRARIES 
    - In a terminal window, execute the following commands:
      - pip3 install numpy
      - pip3 install gtts
@@ -82,7 +80,7 @@ Setup Tips
      - pip3 install pyttsx3
      - pip3 install pyserial
 
-12) INSTALL "face_recognition". Follow the instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
+11) INSTALL "face_recognition". Follow the instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
     - In a terminal window, execute the following commands:
       - sudo apt-get update
       - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
@@ -95,7 +93,8 @@ Setup Tips
           - //forward_algo = forward_best_algo;
       - sudo python3 setup.py install
       - sudo pip3 install face_recognition
-    
+
+
     
 Now your Jetson Nano is ready to do face recognition with full CUDA GPU acceleration. On to the fun part!
 
