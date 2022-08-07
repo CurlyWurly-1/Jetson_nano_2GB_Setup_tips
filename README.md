@@ -66,14 +66,26 @@ Install the Jupyter notebook with the following commands (it takes quite a bit o
 If you reboot, the Jupyter notebook will not be running - You can bring it back by executing the last line of the above as follows (There is no need to re-install from scratch)
    - ./docker_dli_run.sh
 
+
 7) INSTALL VSCODE
 Download the .deb file for 'ARM64'. 
 When downloaded, click on it, and in the next window, press "install". After it has installed, VsCode can be accessed in the "programming" section when you press the bottom left icon (like START in Windows!). Right click the VsCode icon and Select "add to desktop" for easy access
    - https://code.visualstudio.com/download
 
+
+8) INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
+   - sudo apt-get install -y python3-venv
+   - python3 -m venv .py3venv
+   - ls -a
+   - ls .py3venv/
+   - source ~/.py3venv/bin/activate
+   - deactivate
+
+
 8) INSTALL PIP3
 Execute the following command in a terminal
    - sudo apt-get -y install python3-pip
+
 
 9) INSTALL USEFUL LIBRARIES 
    - pip3 install gtts
