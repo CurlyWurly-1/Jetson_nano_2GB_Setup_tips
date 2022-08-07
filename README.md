@@ -55,16 +55,17 @@ Setup Tips
 
 5) INSTALL THE COURSE JUPYTER NOTEBOOK
 Install the Jupyter notebook with the following commands (it takes quite a bit of time to install) . When it finishes, check what the IP address of the nano is and you can access the jupyter notebook at <NANOIP):8888 - use "dlinano" as the password 
-   - mkdir -p ~/nvdli-data
-   - echo "sudo docker run --runtime nvidia -it --rm --network host --volume ~/nvdli-data:/nvdli-nano/data --device /dev/video0  nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
-   - chmod +x docker_dli_run.sh
-   - ./docker_dli_run.sh    
- 
- 
+   - In a terminal window, execute the following commands:
+     - mkdir -p ~/nvdli-data
+     - echo "sudo docker run --runtime nvidia -it --rm --network host --volume ~/nvdli-data:/nvdli-nano/data --device /dev/video0  nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
+     - chmod +x docker_dli_run.sh
+     - ./docker_dli_run.sh    
+  
  
 6) IF YOU REBOOT, GET THE JUPYTER NOTEBOOK BACK
 If you reboot, the Jupyter notebook will not be running - You can bring it back by executing the last line of the above as follows (There is no need to re-install from scratch)
-   - ./docker_dli_run.sh
+   - In a terminal window, execute the following commands:
+     - ./docker_dli_run.sh
 
 
 7) INSTALL VSCODE
@@ -74,38 +75,41 @@ When downloaded, click on it, and in the next window, press "install". After it 
 
 
 8) INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
-   - sudo apt-get install -y python3-venv
-   - python3 -m venv .py3venv
-   - ls -a
-   - ls .py3venv/
-   - source ~/.py3venv/bin/activate
-   - deactivate
+   - In a terminal window, execute the following commands:
+     - sudo apt-get install -y python3-venv
+     - python3 -m venv .py3venv
+     - ls -a
+     - ls .py3venv/
+     - source ~/.py3venv/bin/activate
+     - deactivate
 
 
 8) INSTALL PIP3
-Execute the following command in a terminal
-   - sudo apt-get -y install python3-pip
+   - In a terminal window, execute the following commands:
+     - sudo apt-get -y install python3-pip
 
 
 9) INSTALL USEFUL LIBRARIES 
-   - pip2 install numpy
-   - pip3 install gtts
-   - pip3 install playsound
-   - pip3 install pyttsx3
-   - pip3 install pyserial
+   - In a terminal window, execute the following commands:
+     - pip2 install numpy
+     - pip3 install gtts
+     - pip3 install playsound
+     - pip3 install pyttsx3
+     - pip3 install pyserial
 
 10) INSTALL "face_recognition". Follow the instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
-    - sudo apt-get update
-    - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
-    - sudo pip3 -v install Cython face_recognition
-    - wget http://dlib.net/files/dlib-19.22.tar.bz2 
-    - tar jxvf dlib-19.22.tar.bz2
-    - cd dlib-19.22
-    - gedit dlib/cuda/cudnn_dlibapi.cpp
-      - This will open up the file that we need to edit in a text editor. Search the file for the following line of code (which should be line 854) And comment it out by adding two slashes in front of it, so it looks like the following line. Save the file and close the editor. N.B. The next command will compile and install dlib and it will take around 30–60 minutes to finish (your Jetson Nano might get hot) - just let it run.
-        - //forward_algo = forward_best_algo;
+    - In a terminal window, execute the following commands:
+      - sudo apt-get update
+      - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
+      - sudo pip3 -v install Cython face_recognition
+      - wget http://dlib.net/files/dlib-19.22.tar.bz2 
+      - tar jxvf dlib-19.22.tar.bz2
+      - cd dlib-19.22
+      - gedit dlib/cuda/cudnn_dlibapi.cpp
+        - This will open up the file that we need to edit in a text editor. Search the file for the following line of code (which should be line 854) And comment it out by adding two slashes in front of it, so it looks like the following line. Save the file and close the editor. N.B. The next command will compile and install dlib and it will take around 30–60 minutes to finish (your Jetson Nano might get hot) - just let it run.
+          - //forward_algo = forward_best_algo;
       - sudo python3 setup.py install
-    - sudo pip3 install face_recognition
+      - sudo pip3 install face_recognition
     
     
 Now your Jetson Nano is ready to do face recognition with full CUDA GPU acceleration. On to the fun part!
