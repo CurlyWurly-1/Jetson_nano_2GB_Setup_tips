@@ -2,14 +2,7 @@
 Setup Tips 
 
 
-1) HOW TO INSTALL A FAN ON HEATSINK
-   - Install a fan (e.g. Noctua NF-A4x20 5V PWM )
-   - Open a terminal and execute
-     - git clone  https://github.com/Pyrestone/jetson-fan-ctl    
-     - sudo ./install.sh 
-
-
-2) INITIAL SETUP PROCEDURE  
+1) INITIAL SETUP PROCEDURE  
    - Download the Jetson Nano 2GB image here
      - https://developer.nvidia.com/jetson-nano-2gb-sd-card-image
    - Use Balena Etcher to burn the image to a 64GB card
@@ -25,6 +18,13 @@ Setup Tips
      - sudo apt-get install nano
      - sudo apt-get update
      - sudo apt-get upgrade
+
+
+2) HOW TO INSTALL A FAN ON HEATSINK
+   - Install a fan (e.g. Noctua NF-A4x20 5V PWM )
+   - Open a terminal and execute
+     - git clone  https://github.com/Pyrestone/jetson-fan-ctl    
+     - sudo ./install.sh 
 
 
 3) HOW TO RESOLVE MEMORY PROBLEMS (Nano 2GB slows down/hangs if this is not done) 
@@ -76,12 +76,12 @@ Setup Tips
 
 8) INSTALL PIP3
    - In a terminal window, execute the following commands:
-     - sudo apt-get -y install python3-pip
 
 
 9) INSTALL USEFUL LIBRARIES 
    - In a terminal window, execute the following commands:
-     - pip2 install numpy
+     - sudo apt-get -y install python3-pip
+     - pip3 install numpy
      - pip3 install gtts
      - pip3 install playsound
      - pip3 install pyttsx3
@@ -92,9 +92,9 @@ Setup Tips
       - sudo apt-get update
       - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
       - sudo pip3 -v install Cython face_recognition
-      - wget http://dlib.net/files/dlib-19.22.tar.bz2 
-      - tar jxvf dlib-19.22.tar.bz2
-      - cd dlib-19.22
+      - wget http://dlib.net/files/dlib-19.17.tar.bz2 
+      - tar jxvf dlib-19.17.tar.bz2
+      - cd dlib-19.17
       - gedit dlib/cuda/cudnn_dlibapi.cpp
         - This will open up the file that we need to edit in a text editor. Search the file for the following line of code (which should be line 854) And comment it out by adding two slashes in front of it, so it looks like the following line. Save the file and close the editor. N.B. The next command will compile and install dlib and it will take around 30–60 minutes to finish (your Jetson Nano might get hot) - just let it run.
           - //forward_algo = forward_best_algo;
