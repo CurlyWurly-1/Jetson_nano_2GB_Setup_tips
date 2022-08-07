@@ -89,9 +89,9 @@ Setup Tips
       - sudo apt-get update
       - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
       - sudo pip3 -v install Cython face_recognition
-      - wget http://dlib.net/files/dlib-19.17.tar.bz2 
-      - tar jxvf dlib-19.17.tar.bz2
-      - cd dlib-19.17
+      - wget http://dlib.net/files/dlib-19.22.tar.bz2 
+      - tar jxvf dlib-19.22.tar.bz2
+      - cd dlib-19.22
       - gedit dlib/cuda/cudnn_dlibapi.cpp
         - This will open up the file that we need to edit in a text editor. Search the file for the following line of code (which should be line 854) And comment it out by adding two slashes in front of it, so it looks like the following line. Save the file and close the editor. N.B. The next command will compile and install dlib and it will take around 30–60 minutes to finish (your Jetson Nano might get hot) - just let it run.
           - //forward_algo = forward_best_algo;
