@@ -18,6 +18,8 @@ Setup Tips
      - sudo apt-get install nano
      - sudo apt-get update
      - sudo apt-get upgrade
+     - sudo apt-get -y install python3-pip
+     - sudo apt-get install nano
 
 
 2) HOW TO INSTALL A FAN ON HEATSINK
@@ -80,7 +82,6 @@ Setup Tips
 
 9) INSTALL USEFUL LIBRARIES 
    - In a terminal window, execute the following commands:
-     - sudo apt-get -y install python3-pip
      - pip3 install numpy
      - pip3 install gtts
      - pip3 install playsound
