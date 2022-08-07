@@ -98,36 +98,15 @@ Execute the following command in a terminal
     - sudo apt-get update
     - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
     - sudo pip3 -v install Cython face_recognition
-
-
-pip3 install numpy
-This command will take 15 minutes since it has to compile numpy from scratch. Just wait until it finishes and don’t get worried it seems to freeze for a while.
-
-Now we are ready to install dlib, a deep learning library created by Davis King that does the heavy lifting for the face_recognition library.
-
-However, there is currently a bug in Nvidia’s own CUDA libraries for the Jetson Nano that keeps it from working correctly. To work around the bug, we’ll have to download dlib, edit a line of code, and re-compile it. But don’t worry, it’s no big deal.
-
-In Terminal, run these commands:
-
-wget http://dlib.net/files/dlib-19.17.tar.bz2 
-tar jxvf dlib-19.17.tar.bz2
-cd dlib-19.17
-That will download and uncompress the source code for dlib. Before we compile it, we need to comment out a line. Run this command:
-
-gedit dlib/cuda/cudnn_dlibapi.cpp
-This will open up the file that we need to edit in a text editor. Search the file for the following line of code (which should be line 854):
-
-forward_algo = forward_best_algo;
-And comment it out by adding two slashes in front of it, so it looks like this:
-
-//forward_algo = forward_best_algo;
-Now save the file, close the editor, and go back to the Terminal window. Next, run these commands to compile and install dlib:
-
-sudo python3 setup.py install
-This will take around 30–60 minutes to finish and your Jetson Nano might get hot, but just let it run.
-
-Finally, we need to install the face_recognition Python library. Do that with this command:
-
-sudo pip3 install face_recognition
+    - wget http://dlib.net/files/dlib-19.22.tar.bz2 
+    - tar jxvf dlib-19.22.tar.bz2
+    - cd dlib-19.22
+    - gedit dlib/cuda/cudnn_dlibapi.cpp
+      - This will open up the file that we need to edit in a text editor. Search the file for the following line of code (which should be line 854) And comment it out by adding two slashes in front of it, so it looks like the following line. Save the file and close the editor. N.B. The next command will compile and install dlib and it will take around 30–60 minutes to finish (your Jetson Nano might get hot) - just let it run.
+        - //forward_algo = forward_best_algo;
+      - sudo python3 setup.py install
+    - sudo pip3 install face_recognition
+    
+    
 Now your Jetson Nano is ready to do face recognition with full CUDA GPU acceleration. On to the fun part!
 
