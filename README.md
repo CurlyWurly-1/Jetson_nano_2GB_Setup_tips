@@ -25,7 +25,7 @@ Setup Tips
      - sudo ./install.sh 
 
 3) INITIAL SETUP (Software) 
-   - In a terminal, execute the following 
+   - In a terminal, execute the following (EXECUTE INDIVIDUALLY AND RESPOND "Y" WHEN NECESSARY)
      - sudo apt-get update
      - sudo apt-get upgrade
      - sudo apt-get install nano
@@ -44,7 +44,7 @@ Setup Tips
 
 5) REBOOT !!
 
-3) MORE SOFTWARE TO INSTALL 
+3) MORE SOFTWARE TO INSTALL (EXECUTE INDIVIDUALLY AND RESPOND "Y" WHEN NECESSARY)
      - pip3 install cython
      - pip3 install numpy
      - pip3 install gtts
