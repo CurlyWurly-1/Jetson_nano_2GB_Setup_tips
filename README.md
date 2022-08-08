@@ -15,6 +15,7 @@ Setup Tips
      - Network cable (don't use wifi dongle, it can slow the camera down)
    - Insert the power cable and it will boot up - follow the onscreen instructions until you get to desktop
 
+
 2) HOW TO INSTALL A FAN ON HEATSINK
    - Shutdown / remove power
    - Install a fan (e.g. Noctua NF-A4x20 5V PWM ) and connect the 4 pin plug to the 4 pin connector
@@ -24,13 +25,24 @@ Setup Tips
      - cd jetson-fan-ctl
      - sudo ./install.sh 
 
+
 3) INITIAL SETUP (Software) 
    - In a terminal, execute the following (EXECUTE INDIVIDUALLY AND RESPOND "Y" WHEN NECESSARY)
      - sudo apt-get update
      - sudo apt-get upgrade
      - sudo apt-get install nano
 
-4) HOW TO RESOLVE MEMORY PROBLEMS (Nano 2GB slows down/hangs if this is not done) 
+
+4) INSTALL VSCODE
+   - Get the ".deb"file
+     - Download the Ubuntu ".deb" file for "ARM64" from https://code.visualstudio.com/download
+     - Right-click on the downloaded file and press "open Folder"
+     - When the folder contents are displayed, double click the ".deb" file 
+     - In the next window, press "install". 
+     - After it has installed, the VsCode icon can be accessed when you press the bottom left icon (like START in Windows!) and look in the "programming" section.   
+     - Right click the VsCode icon and Select "add to desktop" for easy access
+
+5) HOW TO RESOLVE MEMORY PROBLEMS (Nano 2GB slows down/hangs if this is not done) 
    - Adjust the memory by Opening a terminal window and entering the following commands
      - free -m
      - sudo systemctl disable nvzramconfig
@@ -40,11 +52,12 @@ Setup Tips
      - sudo nano /etc/fstab 
        - Add (or replace the existing swap line) the following line at the end, then "CtrlX" and then "CtrlO" to save
        - /mnt/4GB.swap swap swap defaults 0 0
+       
+
+6) REBOOT !!
 
 
-5) REBOOT !!
-
-3) MORE SOFTWARE TO INSTALL (EXECUTE INDIVIDUALLY AND RESPOND "Y" WHEN NECESSARY)
+7) MORE SOFTWARE TO INSTALL (EXECUTE INDIVIDUALLY AND RESPOND "Y" WHEN NECESSARY)
      - pip3 install cython
      - pip3 install numpy
      - pip3 install gtts
@@ -60,7 +73,7 @@ Setup Tips
      - sudo -H pip3 -v install Cython face_recognition
 
 
-6) INSTALL THE COURSE JUPYTER NOTEBOOK. 
+8) INSTALL THE COURSE JUPYTER NOTEBOOK. 
    - In a terminal window, execute the following commands (it takes quite a bit of time to install). When it finishes, check what the IP address of the nano is <Nano_ip> and you can access the jupyter notebook with a web browser using a url of <NANO_IP):8888  (use "dlinano" as the password) 
      - mkdir -p ~/nvdli-data
      - echo "sudo docker run --runtime nvidia -it --rm --network host --volume ~/nvdli-data:/nvdli-nano/data --device /dev/video0  nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
@@ -70,21 +83,14 @@ Setup Tips
      - ./docker_dli_run.sh
 
 
-7) ENROL IN COURSE HERE !!!
+9) ENROL IN COURSE HERE !!!
    - https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/courseware/b2e02e999d9247eb8e33e893ca052206/63a4dee75f2e4624afbc33bce7811a9b/
 
 
-8) INSTALL VSCODE
-   - Get the ".deb"file
-     - Download the Ubuntu ".deb" file for "ARM64" from https://code.visualstudio.com/download
-     - Right-click on the downloaded file and press "open Folder"
-     - When the folder contents are displayed, double click the ".deb" file 
-     - In the next window, press "install". 
-     - After it has installed, the VsCode icon can be accessed when you press the bottom left icon (like START in Windows!) and look in the "programming" section.   
-     - Right click the VsCode icon and Select "add to desktop" for easy access
 
 
-9) INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
+
+10) INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
    - In a terminal window, execute the following commands:
      - sudo apt-get install -y python3-venv
      - python3 -m venv .py3venv
@@ -94,7 +100,7 @@ Setup Tips
      - deactivate
 
 
-10) INSTALL "face_recognition". Follow the instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
+11) INSTALL "face_recognition". Follow the instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
     - In a terminal window, execute the following commands:
       - sudo apt-get update
       - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
