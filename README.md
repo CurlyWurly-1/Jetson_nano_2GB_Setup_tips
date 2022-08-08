@@ -26,8 +26,18 @@ Setup Tips
 
 3) INITIAL SETUP (Software) 
    - In a terminal, execute the following 
-     - sudo apt-get -y install python3-pip
+     - sudo apt-get update
+     - sudo apt-get upgrade
      - sudo apt-get install nano
+     - pip3 install cython
+     - pip3 install numpy
+     - pip3 install gtts
+     - pip3 install playsound
+     - pip3 install pyttsx3
+     - pip3 install pyserial
+     - sudo apt-get update
+     - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
+     - sudo pip3 -v install Cython face_recognition
 
 4) HOW TO RESOLVE MEMORY PROBLEMS (Nano 2GB slows down/hangs if this is not done) 
    - Adjust the memory by Opening a terminal window and entering the following commands
@@ -44,11 +54,7 @@ Setup Tips
 5) REBOOT !!
 
 
-6) ENROL IN COURSE HERE !!!
-   - https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/courseware/b2e02e999d9247eb8e33e893ca052206/63a4dee75f2e4624afbc33bce7811a9b/
-
-
-7) INSTALL THE COURSE JUPYTER NOTEBOOK. 
+6) INSTALL THE COURSE JUPYTER NOTEBOOK. 
    - In a terminal window, execute the following commands (it takes quite a bit of time to install). When it finishes, check what the IP address of the nano is <Nano_ip> and you can access the jupyter notebook with a web browser using a url of <NANO_IP):8888  (use "dlinano" as the password) 
      - mkdir -p ~/nvdli-data
      - echo "sudo docker run --runtime nvidia -it --rm --network host --volume ~/nvdli-data:/nvdli-nano/data --device /dev/video0  nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
@@ -56,6 +62,10 @@ Setup Tips
      - ./docker_dli_run.sh    
    - If you reboot, you can bring back the Jupyter notebook by executing the last command of the above as follows (There is no need to re-install from scratch):
      - ./docker_dli_run.sh
+
+
+7) ENROL IN COURSE HERE !!!
+   - https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/courseware/b2e02e999d9247eb8e33e893ca052206/63a4dee75f2e4624afbc33bce7811a9b/
 
 
 8) INSTALL VSCODE
@@ -67,6 +77,7 @@ Setup Tips
      - After it has installed, the VsCode icon can be accessed when you press the bottom left icon (like START in Windows!) and look in the "programming" section.   
      - Right click the VsCode icon and Select "add to desktop" for easy access
 
+
 9) INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
    - In a terminal window, execute the following commands:
      - sudo apt-get install -y python3-venv
@@ -76,15 +87,8 @@ Setup Tips
      - source ~/.py3venv/bin/activate
      - deactivate
 
-10) INSTALL USEFUL LIBRARIES 
-   - In a terminal window, execute the following commands:
-     - pip3 install numpy
-     - pip3 install gtts
-     - pip3 install playsound
-     - pip3 install pyttsx3
-     - pip3 install pyserial
 
-11) INSTALL "face_recognition". Follow the instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
+10) INSTALL "face_recognition". Follow the instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
     - In a terminal window, execute the following commands:
       - sudo apt-get update
       - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
