@@ -29,15 +29,6 @@ Setup Tips
      - sudo apt-get update
      - sudo apt-get upgrade
      - sudo apt-get install nano
-     - pip3 install cython
-     - pip3 install numpy
-     - pip3 install gtts
-     - pip3 install playsound
-     - pip3 install pyttsx3
-     - pip3 install pyserial
-     - sudo apt-get update
-     - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
-     - sudo pip3 -v install Cython face_recognition
 
 4) HOW TO RESOLVE MEMORY PROBLEMS (Nano 2GB slows down/hangs if this is not done) 
    - Adjust the memory by Opening a terminal window and entering the following commands
@@ -52,6 +43,21 @@ Setup Tips
 
 
 5) REBOOT !!
+
+3) MORE SOFTWARE TO INSTALL 
+     - pip3 install cython
+     - pip3 install numpy
+     - pip3 install gtts
+     - pip3 install playsound
+     - pip3 install pyttsx3
+     - pip3 install pyserial
+     - sudo apt-get update
+     - sudo apt-get install python3-pip 
+     - sudo apt-get cmake 
+     - sudo apt-get libopenblas-dev 
+     - sudo apt-get liblapack-dev 
+     - sudo apt-get libjpeg-dev
+     - sudo -H pip3 -v install Cython face_recognition
 
 
 6) INSTALL THE COURSE JUPYTER NOTEBOOK. 
