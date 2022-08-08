@@ -53,10 +53,10 @@ Setup Tips
      - pip3 install pyserial
      - sudo apt-get update
      - sudo apt-get install python3-pip 
-     - sudo apt-get cmake 
-     - sudo apt-get libopenblas-dev 
-     - sudo apt-get liblapack-dev 
-     - sudo apt-get libjpeg-dev
+     - sudo apt-get install cmake 
+     - sudo apt-get install libopenblas-dev 
+     - sudo apt-get install liblapack-dev 
+     - sudo apt-get install libjpeg-dev
      - sudo -H pip3 -v install Cython face_recognition
 
 
