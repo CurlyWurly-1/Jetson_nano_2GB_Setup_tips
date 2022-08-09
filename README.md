@@ -68,6 +68,7 @@ Setup Tips
      - sudo apt-get update
      - sudo apt-get install cmake 
      - sudo apt-get install libopenblas-dev 
+     - sudo apt-get install libblas-dev 
      - sudo apt-get install liblapack-dev 
      - sudo apt-get install libjpeg-dev
      - sudo -H pip3 -v install Cython face_recognition
