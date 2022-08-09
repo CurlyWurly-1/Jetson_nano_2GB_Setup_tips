@@ -57,7 +57,8 @@ Setup Tips
 6) REBOOT !!
 
 
-7) MORE SOFTWARE TO INSTALL (EXECUTE INDIVIDUALLY AND RESPOND "Y" WHEN NECESSARY)
+7) MORE SOFTWARE TO INSTALL (EXECUTE INDIVIDUALLY AND RESPOND "Y" WHEN NECESSARY),
+   - Please note the problems with dlib V24, use dlib v22 instead.  Instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
      - sudo apt-get install python3-pip 
      - pip3 install cython
      - pip3 install numpy
@@ -71,8 +72,16 @@ Setup Tips
      - sudo apt-get install libblas-dev 
      - sudo apt-get install liblapack-dev 
      - sudo apt-get install libjpeg-dev
-     - sudo -H pip3 -v install Cython face_recognition
-
+     - wget http://dlib.net/files/dlib-19.22.tar.bz2 
+     - tar jxvf dlib-19.22.tar.bz2
+     - cd dlib-19.22
+       - gedit dlib/cuda/cudnn_dlibapi.cpp
+         - This will open up the file that we need to edit in a text editor. Search the file for the following line of code (which should be line 854) And comment it out by adding two slashes in front of it, so it looks like the following line. Save the file and close the editor. N.B. The next command will compile and install dlib and it will take around 30–60 minutes to finish (your Jetson Nano might get hot) - just let it run.
+           - //forward_algo = forward_best_algo;
+       - sudo python3 setup.py install
+       - sudo pip3 install face_recognition
+       - sudo pip3 uninstall dlib
+       - sudo python3 setup.py install
 
 8) INSTALL THE COURSE JUPYTER NOTEBOOK. 
    - In a terminal window, execute the following commands (it takes quite a bit of time to install). When it finishes, check what the IP address of the nano is <Nano_ip> and you can access the jupyter notebook with a web browser using a url of <NANO_IP):8888  (use "dlinano" as the password) 
@@ -88,9 +97,6 @@ Setup Tips
    - https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/courseware/b2e02e999d9247eb8e33e893ca052206/63a4dee75f2e4624afbc33bce7811a9b/
 
 
-
-
-
 10) INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
    - In a terminal window, execute the following commands:
      - sudo apt-get install -y python3-venv
@@ -99,21 +105,6 @@ Setup Tips
      - ls .py3venv/
      - source ~/.py3venv/bin/activate
      - deactivate
-
-
-11) INSTALL "face_recognition". Follow the instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
-    - In a terminal window, execute the following commands:
-      - sudo apt-get update
-      - sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
-      - sudo pip3 -v install Cython face_recognition
-      - wget http://dlib.net/files/dlib-19.22.tar.bz2 
-      - tar jxvf dlib-19.22.tar.bz2
-      - cd dlib-19.22
-      - gedit dlib/cuda/cudnn_dlibapi.cpp
-        - This will open up the file that we need to edit in a text editor. Search the file for the following line of code (which should be line 854) And comment it out by adding two slashes in front of it, so it looks like the following line. Save the file and close the editor. N.B. The next command will compile and install dlib and it will take around 30–60 minutes to finish (your Jetson Nano might get hot) - just let it run.
-          - //forward_algo = forward_best_algo;
-      - sudo python3 setup.py install
-      - sudo pip3 install face_recognition
 
 
     
