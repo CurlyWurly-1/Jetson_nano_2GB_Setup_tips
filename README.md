@@ -58,6 +58,7 @@ Setup Tips
 
 
 7) MORE SOFTWARE TO INSTALL (EXECUTE INDIVIDUALLY AND RESPOND "Y" WHEN NECESSARY)
+     - sudo apt-get install python3-pip 
      - pip3 install cython
      - pip3 install numpy
      - pip3 install gtts
@@ -65,7 +66,6 @@ Setup Tips
      - pip3 install pyttsx3
      - pip3 install pyserial
      - sudo apt-get update
-     - sudo apt-get install python3-pip 
      - sudo apt-get install cmake 
      - sudo apt-get install libopenblas-dev 
      - sudo apt-get install liblapack-dev 
