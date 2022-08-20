@@ -60,6 +60,7 @@ Setup Tips
 7) MORE SOFTWARE TO INSTALL (EXECUTE INDIVIDUALLY AND RESPOND "Y" WHEN NECESSARY),
    - Please note the problems with dlib V24, use dlib v22 instead.  Instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
      - sudo apt-get install python3-pip 
+     - export PATH="/usr/local/bin:$PATH"
      - pip3 install cython
      - pip3 install numpy
      - pip3 install gtts
