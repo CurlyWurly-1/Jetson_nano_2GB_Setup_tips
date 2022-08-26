@@ -76,13 +76,14 @@ Setup Tips
      - wget http://dlib.net/files/dlib-19.22.tar.bz2 
      - tar jxvf dlib-19.22.tar.bz2
      - cd dlib-19.22
-       - gedit dlib/cuda/cudnn_dlibapi.cpp
-         - This will open up the file that we need to edit in a text editor. Search the file for the following line of code (which should be line 854) And comment it out by adding two slashes in front of it, so it looks like the following line. Save the file and close the editor. N.B. The next command will compile and install dlib and it will take around 30–60 minutes to finish (your Jetson Nano might get hot) - just let it run.
-           - //forward_algo = forward_best_algo;
-       - sudo python3 setup.py install
-       - sudo pip3 install face_recognition
-       - sudo pip3 uninstall dlib
-       - sudo python3 setup.py install
+     - mkdir build
+     - cd build/
+     - cmake ..
+     - cmake --build .
+     - cd ../
+     - sudo python3 setup.py install
+     - sudo pip3 install face_recognition
+
 
 8) INSTALL THE COURSE JUPYTER NOTEBOOK. 
    - In a terminal window, execute the following commands (it takes quite a bit of time to install). When it finishes, check what the IP address of the nano is <Nano_ip> and you can access the jupyter notebook with a web browser using a url of <NANO_IP):8888  (use "dlinano" as the password) 
