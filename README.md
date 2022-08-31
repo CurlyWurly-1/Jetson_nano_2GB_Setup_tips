@@ -87,6 +87,9 @@ Setup Tips
      - cd ../
      - sudo -H python3 setup.py install
      - sudo -H pip3 install face_recognition
+     - sudo apt-get install portaudio19-dev python-all-dev python3-all-dev 
+     - pip3 install pyaudio
+     - pip3 install SpeechRecognition
 
 
 8) INSTALL THE COURSE JUPYTER NOTEBOOK. 
