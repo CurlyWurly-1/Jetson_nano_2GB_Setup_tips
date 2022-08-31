@@ -98,6 +98,8 @@ Setup Tips
      - pip3 install pandas --force
      - pip3 install openai
      - sudo apt-get install flac
+     - sudo pip3 uninstall numpy
+     - pip3 install numpy
 
 8) INSTALL THE COURSE JUPYTER NOTEBOOK. 
    - In a terminal window, execute the following commands (it takes quite a bit of time to install). When it finishes, check what the IP address of the nano is <Nano_ip> and you can access the jupyter notebook with a web browser using a url of <NANO_IP):8888  (use "dlinano" as the password) 
