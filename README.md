@@ -90,7 +90,13 @@ Setup Tips
      - sudo apt-get install portaudio19-dev python-all-dev python3-all-dev 
      - pip3 install pyaudio
      - pip3 install SpeechRecognition
-
+     - sudo -H apt-get remove python3-pandas
+     - sudo apt-get update
+     - sudo apt-get install build-essential
+     - sudo apt-get install libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev
+     - pip3 uninstall pandas
+     - pip3 install pandas --force
+     - pip3 install openai
 
 8) INSTALL THE COURSE JUPYTER NOTEBOOK. 
    - In a terminal window, execute the following commands (it takes quite a bit of time to install). When it finishes, check what the IP address of the nano is <Nano_ip> and you can access the jupyter notebook with a web browser using a url of <NANO_IP):8888  (use "dlinano" as the password) 
