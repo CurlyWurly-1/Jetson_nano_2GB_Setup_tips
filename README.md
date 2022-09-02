@@ -3,9 +3,13 @@ Setup Tips
 
 
 1) INITIAL SETUP PROCEDURE (Physical)  
-   - Download the Jetson Nano 2GB image here
-     - https://developer.nvidia.com/jetson-nano-2gb-sd-card-image
-   - Use Balena Etcher to burn the image to a 64GB card
+   - Download the Jetson Nano image
+     - For JETSON NANO 2GB
+       - https://developer.nvidia.com/jetson-nano-2gb-sd-card-image
+     - For JETSON NANO 4GB 
+       - https://developer.nvidia.com/jetson-nano-2gb-sd-card-image
+   - Use "SD Card Formatter" to format the card (do this even if you are using a new card forthe first time)
+   - Use "Balena Etcher" to burn the image to a "256GB SAMSUNG EVO+" card (This is really nice and fast)
    - Insert card into Jetson Nano
    - connect the following
      - HDMI monitor
@@ -16,7 +20,7 @@ Setup Tips
    - Insert the power cable and it will boot up - follow the onscreen instructions until you get to desktop
 
 
-2) HOW TO INSTALL A FAN ON HEATSINK
+2) HOW TO INSTALL A FAN ON HEATSINK (Use a "Noctua NF-A4x20 5V PWM" fan)
    - Shutdown / remove power
    - Install a fan (e.g. Noctua NF-A4x20 5V PWM ) and connect the 4 pin plug to the 4 pin connector
    - Insert power cable to boot up
@@ -42,7 +46,7 @@ Setup Tips
      - After it has installed, the VsCode icon can be accessed when you press the bottom left icon (like START in Windows!) and look in the "programming" section.   
      - Right click the VsCode icon and Select "add to desktop" for easy access
 
-5) HOW TO RESOLVE MEMORY PROBLEMS (Nano 2GB slows down/hangs if this is not done) 
+5) FOR 2GB VERSION ONLY - HOW TO RESOLVE MEMORY PROBLEMS (Nano 2GB slows down/hangs if this is not done) 
    - Adjust the memory by Opening a terminal window and entering the following commands
      - free -m
      - sudo systemctl disable nvzramconfig
@@ -115,7 +119,7 @@ Setup Tips
    - https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/courseware/b2e02e999d9247eb8e33e893ca052206/63a4dee75f2e4624afbc33bce7811a9b/
 
 
-10) INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
+10) NOT NEEDED - JUST HERE FOR INFO - HOW TO INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
    - In a terminal window, execute the following commands:
      - sudo apt-get install -y python3-venv
      - python3 -m venv .py3venv
@@ -126,5 +130,10 @@ Setup Tips
 
 
     
-Now your Jetson Nano is ready to do face recognition with full CUDA GPU acceleration. On to the fun part!
+Now your Jetson Nano is ready to do face recognition with full CUDA GPU acceleration and speech recognition. Look here for programs
+ - Face Recognition
+   - https://github.com/CurlyWurly-1/Face_Recognition_Doorcam
+ - Speech Recognition with a spoken response taken from GPT-3 
+   - https://github.com/CurlyWurly-1/Chatbot
+
 
