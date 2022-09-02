@@ -74,6 +74,7 @@ Setup Tips
      - sudo apt-get update
      - sudo apt-get install cmake 
      - sudo apt-get install libopenblas-dev 
+     -
      - sudo apt-get install libblas-dev 
      - sudo apt-get install liblapack-dev 
      - sudo apt-get install libjpeg-dev
@@ -85,17 +86,16 @@ Setup Tips
      - cmake ..
      - cmake --build .
      - cd ../
-     - sudo -H python3 setup.py install
+     - sudo python3 setup.py install
      - sudo -H pip3 install face_recognition
      - sudo apt-get install portaudio19-dev python-all-dev python3-all-dev 
      - pip3 install pyaudio
      - pip3 install SpeechRecognition
-     - sudo -H apt-get remove python3-pandas
      - sudo apt-get update
      - sudo apt-get install build-essential
      - sudo apt-get install libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev
-     - pip3 uninstall pandas
-     - pip3 install pandas --force
+     - sudo -H apt-get remove python3-pandas
+     - sudo -H pip3 install pandas (*WARNING* - THIS TAKES A LONG TIME - WAIT UNTIL FINISHED)
      - pip3 install openai
      - sudo apt-get install flac
      - sudo pip3 uninstall numpy
