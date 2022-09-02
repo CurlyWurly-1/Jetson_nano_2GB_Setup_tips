@@ -68,7 +68,6 @@ Setup Tips
 8) MORE SOFTWARE TO INSTALL (EXECUTE INDIVIDUALLY AND RESPOND "Y" WHEN NECESSARY),
    - Please note the problems with dlib V24, use dlib v22 instead.  Instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
      - sudo apt-get install python3-pip 
-     - python3 -m pip install --user --upgrade pip
      - Add to path
        - FOR NANO
          - export PATH="/usr/local/bin:$PATH"
@@ -90,22 +89,27 @@ Setup Tips
      - wget http://dlib.net/files/dlib-19.22.tar.bz2 
      - tar jxvf dlib-19.22.tar.bz2
      - cd dlib-19.22
-     - mkdir build
-     - cd build/
-     - cmake ..
-     - cmake --build .
-     - cd ../
      - sudo python3 setup.py install
+     -
      - sudo -H pip3 install face_recognition
-     - sudo apt-get install portaudio19-dev python-all-dev python3-all-dev 
+     -
+     - sudo apt-get install portaudio19-dev  
+     - sudo apt-get install python-all-dev 
+     - sudo apt-get install python3-all-dev 
      - pip3 install pyaudio
      - pip3 install SpeechRecognition
+     - 
      - sudo apt-get update
      - sudo apt-get install build-essential
-     - sudo apt-get install libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev
-     - sudo -H apt-get remove python3-pandas
-     - sudo -H pip3 install pandas (*WARNING* - THIS TAKES A LONG TIME - WAIT UNTIL FINISHED)
-     - pip3 install openai
+     - sudo apt-get install libncurses5-dev
+     - sudo apt-get install libgdbm-dev
+     - sudo apt-get install libnss3-dev
+     - sudo apt-get install libssl-dev
+     - sudo apt-get install libreadline-dev
+     - sudo apt-get install libffi-dev
+     - git clone https://github.com/openai/openai-python.git
+     - cd openai-python
+     - sudo python3 setup.py install
      - sudo apt-get install flac
      - sudo pip3 uninstall numpy
      - pip3 install numpy
