@@ -68,6 +68,7 @@ Setup Tips
 8) MORE SOFTWARE TO INSTALL (EXECUTE INDIVIDUALLY AND RESPOND "Y" WHEN NECESSARY),
    - Please note the problems with dlib V24, use dlib v22 instead.  Instructions here https://medium.com/@ageitgey/build-a-face-recognition-system-for-60-with-the-new-nvidia-jetson-nano-2gb-and-python-46edbddd7264
      - sudo apt-get install python3-pip 
+     - python3 -m pip install --user --upgrade pip
      - Add to path
        - FOR NANO
          - export PATH="/usr/local/bin:$PATH"
