@@ -7,7 +7,7 @@ Setup Tips
      - For JETSON NANO 2GB
        - https://developer.nvidia.com/jetson-nano-2gb-sd-card-image
      - For JETSON NANO 4GB 
-       - https://developer.nvidia.com/jetson-nano-2gb-sd-card-image
+       - https://developer.nvidia.com/jetson-nano-sd-card-image
    - Use "SD Card Formatter" to format the card (do this even if you are using a new card forthe first time)
    - Use "Balena Etcher" to burn the image to a "256GB SAMSUNG EVO+" card (This is really nice and fast)
    - Insert card into Jetson Nano
