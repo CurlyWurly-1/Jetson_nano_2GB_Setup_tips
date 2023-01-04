@@ -141,7 +141,7 @@ Setup Tips
     
 Now your Jetson Nano is ready to do face recognition with full CUDA GPU acceleration and speech recognition. Look here for programs
  - Face Recognition
-   - https://github.com/CurlyWurly-1/Face_Recognition_Doorcam
+   - https://github.com/CurlyWurly-1/Face_Recognition_With_Moving_Eyeball
  - Speech Recognition with a spoken response taken from GPT-3 
    - https://github.com/CurlyWurly-1/Chatbot
 
